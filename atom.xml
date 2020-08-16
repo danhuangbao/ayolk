@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://danhuangbao.github.io</id>
+    <id>https://ayolk.com</id>
     <title>一颗蛋黄</title>
-    <updated>2020-08-16T03:57:32.010Z</updated>
+    <updated>2020-08-16T06:40:06.680Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://danhuangbao.github.io"/>
-    <link rel="self" href="https://danhuangbao.github.io/atom.xml"/>
+    <link rel="alternate" href="https://ayolk.com"/>
+    <link rel="self" href="https://ayolk.com/atom.xml"/>
     <subtitle>是一颗蛋黄没错</subtitle>
-    <logo>https://danhuangbao.github.io/images/avatar.png</logo>
-    <icon>https://danhuangbao.github.io/favicon.ico</icon>
+    <logo>https://ayolk.com/images/avatar.png</logo>
+    <icon>https://ayolk.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 一颗蛋黄</rights>
     <entry>
         <title type="html"><![CDATA[网易雷火用户体验研究员校招面试记录]]></title>
-        <id>https://danhuangbao.github.io/post/leihuomianshi/</id>
-        <link href="https://danhuangbao.github.io/post/leihuomianshi/">
+        <id>https://ayolk.com/post/leihuomianshi/</id>
+        <link href="https://ayolk.com/post/leihuomianshi/">
         </link>
         <updated>2020-03-21T14:21:03.000Z</updated>
         <summary type="html"><![CDATA[<p>记录人生第一次参加校招的经历。简单总结下雷火两轮用户体验研究的线上面试的流程。<br>
@@ -76,8 +76,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Rise of Kingdom 万国觉醒 体验测评（1）]]></title>
-        <id>https://danhuangbao.github.io/post/rok_01/</id>
-        <link href="https://danhuangbao.github.io/post/rok_01/">
+        <id>https://ayolk.com/post/rok_01/</id>
+        <link href="https://ayolk.com/post/rok_01/">
         </link>
         <updated>2019-08-31T09:11:13.000Z</updated>
         <summary type="html"><![CDATA[<p>万国觉醒是至今为止我连续登陆最久的一款游戏（267天）。它是莉莉丝（Lilith）出品的MMO手游，之前还叫文明觉醒来着。不过这么好玩的游戏却没有在中国大陆上线，需要登陆其他地区的苹果账号下载来玩。</p>
@@ -108,8 +108,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[电子游戏简史1-？]]></title>
-        <id>https://danhuangbao.github.io/post/001/</id>
-        <link href="https://danhuangbao.github.io/post/001/">
+        <id>https://ayolk.com/post/001/</id>
+        <link href="https://ayolk.com/post/001/">
         </link>
         <updated>2019-06-26T07:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>首先我们看一个简单的问题：</p>
