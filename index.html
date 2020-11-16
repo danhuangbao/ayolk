@@ -1,255 +1,507 @@
-<html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!DOCTYPE html>
+<html class="has-spaced-navbar-fixed-top">
+
+  <!-- head matters -->
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="HandheldFriendly" content="True" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
 
 <title>一颗蛋黄</title>
-
-<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1597567806353">
-
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1605536311374">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="https://ayolk.com/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
+<!-- <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
+<!-- Head JS -->
+<script src="https://ayolk.com/media/scripts/header.js"></script>
 
 
+ 
+  </head>
 
-</head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            一颗蛋黄
-        </div>
+  <body class="has-background-light-line">
+
+    <!-- header -->
+    <header>
+  <nav id="navbar" class="navbar is-white is-spaced has-shadow-thin is-fixed-top" style="z-index:999;" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+
+        <!-- if wide logo is uploaded -->
+        
+          <div class="navbar-item text-logo">
+              <a class="align-vcentered" href="https://ayolk.com" alt="一颗蛋黄" title="一颗蛋黄 - 是一颗蛋黄没错">
+                
+                <!-- if icon is uploaded -->
+                
+                  <img src="/media/images/custom-icon.png">
+                
+
+                <!-- Site Name & Colored Dot -->
+                一颗蛋黄<span>.</span>
+
+              </a>
+          </div>
+        
+
+          <!--  burger in mobile devices -->
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarPrimary">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+
+      </div>
+
+      <div id="navbarPrimary" class="navbar-menu">
+
+          <!-- Site Navigation -->
+          <div class="navbar-start">
+            <!--% for (let i=0; i < menus.length; i++) { %-->
+<!--% let menu = menus[i]; %-->
+
+<!-- navigation -->
+
+    
+        <a class="navbar-item" href="/">
+            首页
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="/archives">
+            归档
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="/tags">
+            标签
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="/post/about">
+            关于
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="https://www.51redaiyu.com" target="_blank">
+        51热带鱼
+        </a>
+    
+  
+
+
+    <div class="navbar-item" id="search-btn">
+        <i class="iconfont icon-search"></i>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://www.51redaiyu.com" class="menu gt-a-link" target="_blank">
-                            51热带鱼
-                        </a>
-                    
-                </div>
-            
+
+    <div class="fizzy-search">
+        <div class="field has-addons" style="display:none" id="search-form">
+            <div class="control has-icons-left">
+                <input id="search-input" class="input" placeholder="Search">
+                <span class="icon is-left">
+                    <i class="iconfont icon-search"></i>
+                </span>
+            </div>
+            <div class="control"  id="close-btn">
+                <button type="submit" class="button"><i class="iconfont icon-cross"></i></button>
+            </div>
         </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1597567806353" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
+        <div id="search-results"></div>
     </div>
-</nav>
+ 
+          </div>
 
 
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://ayolk.com/post/leihuomianshi/">
-                            <span class="post-title gt-c-content-color-first">网易雷火用户体验研究员校招面试记录</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>记录人生第一次参加校招的经历。简单总结下雷火两轮用户体验研究的线上面试的流程。<br>
-面试是19年9月参加的，到现在写这篇记录已经过去半年了。好在当时面完记录了一些细节，现在回想起来，更多的体会不是关于面试问题的专业度，而是提问方向的套路。</p>
+      </div>
+  </nav>
+</header>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-03-21 ·
-                        </time>
-                        
-                            <a href="https://ayolk.com/tag/mian-shi/" class="post-tag">
-                                # 面试
-                            </a>
-                        
-                            <a href="https://ayolk.com/tag/yong-hu-ti-yan/" class="post-tag">
-                                # 用户体验
-                            </a>
-                        
-                    </div>
-                </div>
+    <!-- post list -->
+    <main class="section">
+        <div class="columns">
+            <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
+            <div class="column is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd"> 
                 
-                    <a href="https://ayolk.com/post/leihuomianshi/" class="post-feature-image"
-                       style="background-image: url('https://i.loli.net/2020/08/07/7NDPbsteLgf3dQS.png')">
-                    </a>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://ayolk.com/post/rok_01/">
-                            <span class="post-title gt-c-content-color-first">Rise of Kingdom 万国觉醒 体验测评（1）</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>万国觉醒是至今为止我连续登陆最久的一款游戏（267天）。它是莉莉丝（Lilith）出品的MMO手游，之前还叫文明觉醒来着。不过这么好玩的游戏却没有在中国大陆上线，需要登陆其他地区的苹果账号下载来玩。</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2019-08-31 ·
-                        </time>
-                        
-                            <a href="https://ayolk.com/tag/shou-you/" class="post-tag">
-                                # 手游
-                            </a>
-                        
-                            <a href="https://ayolk.com/tag/mmo/" class="post-tag">
-                                # MMO
-                            </a>
-                        
-                            <a href="https://ayolk.com/tag/ce-ping/" class="post-tag">
-                                # 测评
-                            </a>
-                        
-                    </div>
-                </div>
+<!-- create tag names list -->
+
+
+<article class="box is-paddingless is-clipped has-shadow-lift margin-bottom-25 can-scale">
+  <div class="columns post-card is-marginless">
+
+            <!-- featured_image -->
+            
+                <a class="column is-hidden-mobile is-paddingless" href="https://ayolk.com/post/leihuomianshi/" alt="网易雷火用户体验研究员校招面试记录" title="网易雷火用户体验研究员校招面试记录">
+                    <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/7NDPbsteLgf3dQS.png')"></div>    
+                </a>
+                <a class="column is-hidden-tablet" href="https://ayolk.com/post/leihuomianshi/" alt="网易雷火用户体验研究员校招面试记录" title="网易雷火用户体验研究员校招面试记录">
+                    <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/7NDPbsteLgf3dQS.png')"></div>    
+                </a>
+            
+                <!-- post info -->
+                <div class="column is-7 is-paddingless">
                 
-                    <a href="https://ayolk.com/post/rok_01/" class="post-feature-image"
-                       style="background-image: url('https://i.loli.net/2020/08/07/9wgA3VbPXtlvGkF.png')">
-                    </a>
+
+
+          <div class="post-info">
+            <!-- if top-->
+            
+                <!-- nothing -->
+            
+            
+
+          <!-- meta -->
+          <div class="level is-mobile is-uppercase is-margin-bottom-1">
+              <div class="level-left">
+
                 
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://ayolk.com/post/001/">
-                            <span class="post-title gt-c-content-color-first">电子游戏简史1-？</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>首先我们看一个简单的问题：</p>
+
+                    <!-- display the first tag as primary tag -->
+                    
+                        <div class="level-item">
+                            <div class="buttons are-small">
+                                <a href="https://ayolk.com/tag/mian-shi/" class="button is-light has-text-weight-semibold">面试</a>
+                            </div>
+                        </div>
+                    
+
+                
+
+                    <!-- display the first tag as primary tag -->
+                    
+
+                
+
+                  <div class="level-item is-size-7 meta-text date">
+                    2020-03-21
+                  </div>
+              </div>
+          </div>
+
+          <!-- {{!-- heading & content --}} -->
+          <a href="https://ayolk.com/post/leihuomianshi/" class="has-text-black">
+              <h1 class="title is-3 is-size-5-mobile is-margin-bottom-1">网易雷火用户体验研究员校招面试记录</h1>
+          </a>
+          
+          <p class="is-hidden-mobile" style="margin-bottom:1.5rem;">
+          
+            
+            记录人生第一次参加校招的经历。简单总结下雷火两轮用户体验研究的线上面试的流程。<br>
+面试是19年9月参加的，到现在写这篇记录已经过去半年了。好在当时面完记录了一些细节，现在回想起来，更多的体会不是关于面试问题的专业度，而是提问方向的套路。
+
+
+          </p>
+
+          
+
+          <!-- author -->
+
+          <!-- if authorAvatar && authorName -->
+          
+            <div class="media is-hidden-mobile" style="margin-top:1.5rem">
+                <div class="media-left">
+                    <div class="columns is-vcentered">
+                      
+                        <div class="column is-narrow">
+
+                          <!-- if homePage -->
+                          
+                                <figure class="image is-32x32">
+                                    <img class="image-squared round-border-6" src="/images/avatar.png" alt="" title="">
+                                </figure>
+                          
+                        </div>
+
+                        <div class="column is-narrow has-text-weight-bold is-hpaddingless">
+                            
+                                
+                            
+                        </div>
+
+                      </div> 
+                  </div>
+              </div>
+          
+
+          </div>  
+      </div>
+  </div>
+</article>
+
+
+<!-- create tag names list -->
+
+
+<article class="box is-paddingless is-clipped has-shadow-lift margin-bottom-25 can-scale">
+  <div class="columns post-card is-marginless">
+
+            <!-- featured_image -->
+            
+                <a class="column is-hidden-mobile is-paddingless" href="https://ayolk.com/post/rok_01/" alt="Rise of Kingdom 万国觉醒 体验测评（1）" title="Rise of Kingdom 万国觉醒 体验测评（1）">
+                    <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/9wgA3VbPXtlvGkF.png')"></div>    
+                </a>
+                <a class="column is-hidden-tablet" href="https://ayolk.com/post/rok_01/" alt="Rise of Kingdom 万国觉醒 体验测评（1）" title="Rise of Kingdom 万国觉醒 体验测评（1）">
+                    <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/9wgA3VbPXtlvGkF.png')"></div>    
+                </a>
+            
+                <!-- post info -->
+                <div class="column is-7 is-paddingless">
+                
+
+
+          <div class="post-info">
+            <!-- if top-->
+            
+                <!-- nothing -->
+            
+            
+
+          <!-- meta -->
+          <div class="level is-mobile is-uppercase is-margin-bottom-1">
+              <div class="level-left">
+
+                
+
+                    <!-- display the first tag as primary tag -->
+                    
+                        <div class="level-item">
+                            <div class="buttons are-small">
+                                <a href="https://ayolk.com/tag/shou-you/" class="button is-light has-text-weight-semibold">手游</a>
+                            </div>
+                        </div>
+                    
+
+                
+
+                    <!-- display the first tag as primary tag -->
+                    
+
+                
+
+                    <!-- display the first tag as primary tag -->
+                    
+
+                
+
+                  <div class="level-item is-size-7 meta-text date">
+                    2019-08-31
+                  </div>
+              </div>
+          </div>
+
+          <!-- {{!-- heading & content --}} -->
+          <a href="https://ayolk.com/post/rok_01/" class="has-text-black">
+              <h1 class="title is-3 is-size-5-mobile is-margin-bottom-1">Rise of Kingdom 万国觉醒 体验测评（1）</h1>
+          </a>
+          
+          <p class="is-hidden-mobile" style="margin-bottom:1.5rem;">
+          
+            
+            万国觉醒是至今为止我连续登陆最久的一款游戏（267天）。它是莉莉丝（Lilith）出品的MMO手游，之前还叫文明觉醒来着。不过这么好玩的游戏却没有在中国大陆上线，需要登陆其他地区的苹果账号下载来玩。
+
+
+          </p>
+
+          
+
+          <!-- author -->
+
+          <!-- if authorAvatar && authorName -->
+          
+            <div class="media is-hidden-mobile" style="margin-top:1.5rem">
+                <div class="media-left">
+                    <div class="columns is-vcentered">
+                      
+                        <div class="column is-narrow">
+
+                          <!-- if homePage -->
+                          
+                                <figure class="image is-32x32">
+                                    <img class="image-squared round-border-6" src="/images/avatar.png" alt="" title="">
+                                </figure>
+                          
+                        </div>
+
+                        <div class="column is-narrow has-text-weight-bold is-hpaddingless">
+                            
+                                
+                            
+                        </div>
+
+                      </div> 
+                  </div>
+              </div>
+          
+
+          </div>  
+      </div>
+  </div>
+</article>
+
+
+<!-- create tag names list -->
+
+
+<article class="box is-paddingless is-clipped has-shadow-lift margin-bottom-25 can-scale">
+  <div class="columns post-card is-marginless">
+
+            <!-- featured_image -->
+            
+                <a class="column is-hidden-mobile is-paddingless" href="https://ayolk.com/post/001/" alt="电子游戏简史1-？" title="电子游戏简史1-？">
+                    <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/hZwvqoalQr3SAO2.jpg')"></div>    
+                </a>
+                <a class="column is-hidden-tablet" href="https://ayolk.com/post/001/" alt="电子游戏简史1-？" title="电子游戏简史1-？">
+                    <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/hZwvqoalQr3SAO2.jpg')"></div>    
+                </a>
+            
+                <!-- post info -->
+                <div class="column is-7 is-paddingless">
+                
+
+
+          <div class="post-info">
+            <!-- if top-->
+            
+                <!-- nothing -->
+            
+            
+
+          <!-- meta -->
+          <div class="level is-mobile is-uppercase is-margin-bottom-1">
+              <div class="level-left">
+
+                
+
+                    <!-- display the first tag as primary tag -->
+                    
+                        <div class="level-item">
+                            <div class="buttons are-small">
+                                <a href="https://ayolk.com/tag/dian-zi-you-xi/" class="button is-light has-text-weight-semibold">电子游戏</a>
+                            </div>
+                        </div>
+                    
+
+                
+
+                    <!-- display the first tag as primary tag -->
+                    
+
+                
+
+                  <div class="level-item is-size-7 meta-text date">
+                    2019-06-26
+                  </div>
+              </div>
+          </div>
+
+          <!-- {{!-- heading & content --}} -->
+          <a href="https://ayolk.com/post/001/" class="has-text-black">
+              <h1 class="title is-3 is-size-5-mobile is-margin-bottom-1">电子游戏简史1-？</h1>
+          </a>
+          
+          <p class="is-hidden-mobile" style="margin-bottom:1.5rem;">
+          
+            
+            首先我们看一个简单的问题：
 <p>Q: 什么是游戏？<br>
 A: 游戏是一种需要满足以下三个条件的活动：</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2019-06-26 ·
-                        </time>
-                        
-                            <a href="https://ayolk.com/tag/dian-zi-you-xi/" class="post-tag">
-                                # 电子游戏
-                            </a>
-                        
-                            <a href="https://ayolk.com/tag/shi-pin-you-xi/" class="post-tag">
-                                # 视频游戏
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://ayolk.com/post/001/" class="post-feature-image"
-                       style="background-image: url('https://i.loli.net/2020/08/07/hZwvqoalQr3SAO2.jpg')">
-                    </a>
-                
+
+          </p>
+
+          
+
+          <!-- author -->
+
+          <!-- if authorAvatar && authorName -->
+          
+            <div class="media is-hidden-mobile" style="margin-top:1.5rem">
+                <div class="media-left">
+                    <div class="columns is-vcentered">
+                      
+                        <div class="column is-narrow">
+
+                          <!-- if homePage -->
+                          
+                                <figure class="image is-32x32">
+                                    <img class="image-squared round-border-6" src="/images/avatar.png" alt="" title="">
+                                </figure>
+                          
+                        </div>
+
+                        <div class="column is-narrow has-text-weight-bold is-hpaddingless">
+                            
+                                
+                            
+                        </div>
+
+                      </div> 
+                  </div>
+              </div>
+          
+
+          </div>  
+      </div>
+  </div>
+</article>
+
             </div>
-        
-    </div>
-</div>
-
-        <div class="pagination-container">
+            <div class="column is-hidden-touch"></div>
+        </div>
+    </main>
+    
+    <!-- pagination -->
     
     
+
+<div class="buttons has-addons is-centered" aria-label="pagination">
+
+  
+
+  
+
+  <span class="button is-static">1 / 1</span>
+
+  
+
+  
+
 </div>
 
+    <!-- footer -->
+    <footer class="footer is-centered" style="padding-bottom:3rem;">
+  <div class="content has-text-centered">
+      <p class="copyright">&copy; 2020 <a href="https://ayolk.com"><strong class="has-text-grey-darker">一颗蛋黄</strong></a></p>
+      <p class="declare has-text-grey">
+      
+      
+          Thoughts, stories and games.
+        
+          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong> v1.3.2 </a> | Powered by <a href="https://github.com/getgridea/gridea" target="_blank" rel="noopener nofollow">Gridea</a>
+      </p>
+  </div>
+</footer>
 
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">是一颗蛋黄没错</div>
-    <div class="social-container">
-        
-            
-                <a href="https://github.com/danhuangbao/" target="_blank">
-                    <i class="fab fa-github gt-c-content-color-first"></i>
-                </a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    <div class="footer-info">
-        Thoughts, stories and games.
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://ayolk.com/atom.xml" target="_blank">RSS</a></a>
-    </div>
-</div>
+<!-- jquery: for carousel + prismjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
+<!-- main js -->
+<script src="https://ayolk.com/media/scripts/footer.js"></script>
 
-    </div>
-</div>
-</body>
+
+    <!-- faster page-loading -->
+    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+  </body>
+
+
+
 </html>

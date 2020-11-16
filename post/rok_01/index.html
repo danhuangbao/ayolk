@@ -1,124 +1,174 @@
-<html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!DOCTYPE html>
+<html class="has-spaced-navbar-fixed-top">
 
-<title>Rise of Kingdom 万国觉醒 体验测评（1） | 一颗蛋黄</title>
+  <!-- head matters -->
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="HandheldFriendly" content="True" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
 
-<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1597567806353">
 
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<title>一颗蛋黄</title>
+<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1605536311374">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="https://ayolk.com/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
+<!-- <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
+<!-- Head JS -->
+<script src="https://ayolk.com/media/scripts/header.js"></script>
 
 
+ 
+  </head>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
-</head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            一颗蛋黄
-        </div>
+  <body class="has-background-light-line ">
+
+    <!-- header -->
+    <header>
+  <nav id="navbar" class="navbar is-white is-spaced has-shadow-thin is-fixed-top" style="z-index:999;" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+
+        <!-- if wide logo is uploaded -->
+        
+          <div class="navbar-item text-logo">
+              <a class="align-vcentered" href="https://ayolk.com" alt="一颗蛋黄" title="一颗蛋黄 - 是一颗蛋黄没错">
+                
+                <!-- if icon is uploaded -->
+                
+                  <img src="/media/images/custom-icon.png">
+                
+
+                <!-- Site Name & Colored Dot -->
+                一颗蛋黄<span>.</span>
+
+              </a>
+          </div>
+        
+
+          <!--  burger in mobile devices -->
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarPrimary">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+
+      </div>
+
+      <div id="navbarPrimary" class="navbar-menu">
+
+          <!-- Site Navigation -->
+          <div class="navbar-start">
+            <!--% for (let i=0; i < menus.length; i++) { %-->
+<!--% let menu = menus[i]; %-->
+
+<!-- navigation -->
+
+    
+        <a class="navbar-item" href="/">
+            首页
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="/archives">
+            归档
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="/tags">
+            标签
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="/post/about">
+            关于
+        </a>
+    
+  
+    
+        <a class="navbar-item" href="https://www.51redaiyu.com" target="_blank">
+        51热带鱼
+        </a>
+    
+  
+
+
+    <div class="navbar-item" id="search-btn">
+        <i class="iconfont icon-search"></i>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://www.51redaiyu.com" class="menu gt-a-link" target="_blank">
-                            51热带鱼
-                        </a>
-                    
-                </div>
-            
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1597567806353" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
 
-    <div class="post-container">
-        <div class="post-detail gt-bg-theme-color-second">
-            <article class="gt-post-content">
-                <h2 class="post-title">
-                    Rise of Kingdom 万国觉醒 体验测评（1）
-                </h2>
-                <div class="post-info">
-                    <time class="post-time gt-c-content-color-first">
-                        · 2019-08-31 ·
-                    </time>
-                    
-                        <a href="https://ayolk.com/tag/shou-you/" class="post-tags">
-                            # 手游
-                        </a>
-                    
-                        <a href="https://ayolk.com/tag/mmo/" class="post-tags">
-                            # MMO
-                        </a>
-                    
-                        <a href="https://ayolk.com/tag/ce-ping/" class="post-tags">
-                            # 测评
-                        </a>
-                    
-                </div>
-                <div class="post-content">
-                    <p>万国觉醒是至今为止我连续登陆最久的一款游戏（267天）。它是莉莉丝（Lilith）出品的MMO手游，之前还叫文明觉醒来着。不过这么好玩的游戏却没有在中国大陆上线，需要登陆其他地区的苹果账号下载来玩。</p>
+    <div class="fizzy-search">
+        <div class="field has-addons" style="display:none" id="search-form">
+            <div class="control has-icons-left">
+                <input id="search-input" class="input" placeholder="Search">
+                <span class="icon is-left">
+                    <i class="iconfont icon-search"></i>
+                </span>
+            </div>
+            <div class="control"  id="close-btn">
+                <button type="submit" class="button"><i class="iconfont icon-cross"></i></button>
+            </div>
+        </div>
+        <div id="search-results"></div>
+    </div>
+ 
+          </div>
+
+
+      </div>
+  </nav>
+</header>
+    
+    <!-- create tag names list -->
+    
+
+    <section class="section is-mobile-paddingless">
+      <div class="columns">
+          <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
+          <div class="column is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd">
+              <article class="single-article">
+                  <!-- featured_image -->
+                  
+                  <div class="box is-paddingless is-shadowless is-full-mobile is-centered">
+                      <section class="featured-image">
+                          <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/9wgA3VbPXtlvGkF.png')">
+                              <!-- featured post label -->
+                               
+                          </div>
+                      </section>
+                   
+  
+                      <section class="post-wrap is-vpadding-15">
+                          <!-- meta -->
+                          <div class="has-2-ends is-montserrat is-uppercase is-size-7">
+                              <div class="end meta-text date">2019-08-31</div>
+                              <div class="end meta-text reading_time">5 min read</div>
+                          </div>
+  
+                          <!-- title -->
+                          <h1 class="title post-title">Rise of Kingdom 万国觉醒 体验测评（1）</h1>
+  
+                          <!-- tags -->
+                           
+                          <div class="buttons tags has-text-weight-semibold">
+                              <span class="button is-static is-size-7-mobile" style="padding:0 0.5em;min-width:2.5em;">
+                                 <i class="iconfont icon-tag"></i> 
+                                
+                              </span>
+                              
+                                <a href="https://ayolk.com/tag/shou-you/" class="button is-light is-uppercase is-size-7-mobile has-text-weight-semibold">手游</a>
+                              
+                          </div>
+                          
+  
+                          <!-- content -->
+                          <div class="content post-content is-size-6-mobile is-georgia"><p>万国觉醒是至今为止我连续登陆最久的一款游戏（267天）。它是莉莉丝（Lilith）出品的MMO手游，之前还叫文明觉醒来着。不过这么好玩的游戏却没有在中国大陆上线，需要登陆其他地区的苹果账号下载来玩。</p>
 <!-- more -->
 <p>之前在准备一门课程论文的时候，想写关于莉莉丝这个游戏公司以及RoK这款游戏的融资情况，不过搜索了一下之后，意识到这款游戏后期根本就是自给自足吧，随即只好换了个组织写。不过万国觉醒这个游戏确实给了我很多的感触，今天打算写一写游戏体验（这是一篇很业余的测评，只注重了本人的感受）。</p>
 <p>游戏简介</p>
@@ -140,61 +190,125 @@
 <p><img src="https://i.loli.net/2020/08/07/fSN97uEikPb2TCj.jpg" alt="图片来自万国觉醒脸书" loading="lazy"><br>
 图片来自万国觉醒脸书</p>
 <p>想到写起来竟然有这么多，而且还有三点之后再说，第一篇先到这里，希望我早日把自己的坑填完。</p>
-
-                </div>
-            </article>
+</div>
+  
+                          <!-- author box -->
+                          
+<!-- post: author box -->
+<div class="authors">
+    <div class="columns is-multiline">
+    <div class="column">
+        <div class="box about-author has-text-centered">
+            <!-- <a href="#" class="has-text-grey-darker"> -->
+                <figure class="image is-96x96 is-margin-auto">
+                
+                    <img class="image-squared box author-avatar" src="/images/avatar.png" alt="" title="">
+                
+                </figure>                                
+                <div class="name"></div>
+            <!-- </a> -->
+            <!-- author: meta -->
+            <ul class="meta-info is-size-6 has-text-grey-light">
+                                
+                
+                
+                
+                
+                
+                
+            </ul>
+            
+            <!-- author: cta -->
+            <!-- <div class="is-size-6">
+                <a href="{{url}}" rel="nofollow"><strong class="has-text-grey-darker">{{t "See all posts by {name}" name=name}}</strong></a>
+            </div> -->
         </div>
-
-        
-            <div class="next-post">
-                <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://ayolk.com/post/001/" class="post-title gt-a-link">
-                    电子游戏简史1-？
-                </a>
-            </div>
-        
-
-        
-
-        
-
-        
-
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">是一颗蛋黄没错</div>
-    <div class="social-container">
-        
-            
-                <a href="https://github.com/danhuangbao/" target="_blank">
-                    <i class="fab fa-github gt-c-content-color-first"></i>
-                </a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
     </div>
-    <div class="footer-info">
-        Thoughts, stories and games.
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://ayolk.com/atom.xml" target="_blank">RSS</a></a>
     </div>
 </div>
+                          
+                      </section>
+                  </div>
+              </article>
+          </div>
+          <div class="column is-hidden-touch">
+              <div id="toc"></div>
+          </div>
+      </div>
+  </section>
 
+  <script>
+    var show_toc = true;
+  </script>
+
+<!-- post_toc -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!-- CDN for China -->
+<!-- <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<!-- tocify -->
+<script src="https://ayolk.com/media/scripts/jquery.tocify.min.js"></script>
+
+<!-- toc settings -->
 <script>
-  hljs.initHighlightingOnLoad()
+    if (show_toc){
+        var toc = $("#toc").tocify({
+            selectors: "h2,h3"
+            ,extendPage: false
+            ,highlightDefault: false
+            // ,hashGenerator:"compact"
+        });
+        var toc = $("#toc-img").tocify({
+            selectors: "h2,h3",
+            extendPage: false,
+            highlightDefault: false
+        });
+    }
+</script>
+<script src="https://ayolk.com/media/scripts/toc.js"></script>
+
+<!-- post_footer -->
+<!-- KaTeX: js -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
 </script>
 
-    </div>
-</div>
+<!-- Prismjs: js-->
+<script src="https://ayolk.com/media/scripts/prism.js"></script>
+
+<!-- footer -->
+<footer class="footer is-centered" style="padding-bottom:3rem;">
+  <div class="content has-text-centered">
+      <p class="copyright">&copy; 2020 <a href="https://ayolk.com"><strong class="has-text-grey-darker">一颗蛋黄</strong></a></p>
+      <p class="declare has-text-grey">
+      
+      
+          Thoughts, stories and games.
+        
+          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong> v1.3.2 </a> | Powered by <a href="https://github.com/getgridea/gridea" target="_blank" rel="noopener nofollow">Gridea</a>
+      </p>
+  </div>
+</footer>
+
+<!-- jquery: for carousel + prismjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- main js -->
+<script src="https://ayolk.com/media/scripts/footer.js"></script>
+
+
+<!-- faster page-loading -->
+<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 </body>
+
 </html>
