@@ -4,16 +4,14 @@
 <!-- head matters -->
 <head>
   <meta charset="utf-8" />
-<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="HandheldFriendly" content="True" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
-
-<title>一颗蛋黄</title>
-<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1605536384345">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<title>Tags - 一颗蛋黄</title>
+<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1606145652818">
 <link rel="stylesheet" href="https://ayolk.com/styles/main.css">
+<link rel="canonical" href="https://ayolk.com/tags/">
 
 <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
 <!-- <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script> -->
@@ -21,8 +19,10 @@
 <!-- Head JS -->
 <script src="https://ayolk.com/media/scripts/header.js"></script>
 
+<!-- Google Analytics -->
 
  
+  <meta name="keywords" content="手游,MMO,测评,电子游戏,视频游戏" />
 </head>
 
 <body class="has-background-light-line">
@@ -68,25 +68,25 @@
 <!-- navigation -->
 
     
-        <a class="navbar-item" href="/">
+        <a class="navbar-item " href="https://ayolk.com/">
             首页
         </a>
     
   
     
-        <a class="navbar-item" href="/archives">
+        <a class="navbar-item " href="https://ayolk.com/archives">
             归档
         </a>
     
   
     
-        <a class="navbar-item" href="/tags">
+        <a class="navbar-item nav-current" href="https://ayolk.com/tags">
             标签
         </a>
     
   
     
-        <a class="navbar-item" href="/post/about">
+        <a class="navbar-item " href="https://ayolk.com/post/about">
             关于
         </a>
     
@@ -104,22 +104,23 @@
     </div>
 
     <div class="fizzy-search">
-        <div class="field has-addons" style="display:none" id="search-form">
-            <div class="control has-icons-left">
-                <input id="search-input" class="input" placeholder="Search">
+        <div class="field has-addons" style="display:none" id="search-container">
+            <form class="control has-icons-left" id="search-form" action="https://ayolk.com/search/">
+                <input id="search-input" class="input" placeholder="Search" name="q">
                 <span class="icon is-left">
                     <i class="iconfont icon-search"></i>
                 </span>
-            </div>
+            </form>
             <div class="control"  id="close-btn">
                 <button type="submit" class="button"><i class="iconfont icon-cross"></i></button>
             </div>
         </div>
-        <div id="search-results"></div>
+        <!-- <div id="search-results"></div> -->
     </div>
  
           </div>
 
+          <!--%= link %-->
 
       </div>
   </nav>
@@ -128,8 +129,9 @@
     <!-- content -->
     <section class="section is-paddingless-bottom">
       <div class="container">
-          <h1 class="title · has-text-centered"><i class="iconfont icon-tags"></i> Tags</h1>
-          <div class="content post-content is-size-6-mobile is-georgia"></div>      
+          <h1 class="title has-text-centered"><i class="iconfont icon-tags"></i> Tags</h1>
+          <div class="content has-text-centered post-content is-size-6-mobile">
+          </div>      
       </div>
     </section>
 
@@ -137,9 +139,34 @@
     <section class="section">
       <div class="container">
         <div class="columns is-mobile is-multiline">
+
           
+
+            
+            
+              
+                
+              
+                
+              
+            
+              
+                
+                  
+            
+              
+                
+              
+                
+              
+            
+              
+            
+
+            <!--  not displaying internal tags: featured, carousel -->
+            
             <div class="column tag-archive-item is-3-desktop is-4-tablet is-6-mobile can-scale">
-                <a href="https://ayolk.com/tag/shou-you/" alt="手游" title="手游">
+                <a href="https://ayolk.com/tag/shou-you/" alt="Tags: 手游" title="Tags: 手游">
                 <div class="tag-card has-text-centered">
                     <!-- {{#if feature_image}} -->
                     <!-- <div class="tag-image" style="background-image:url({{img_url feature_image size="medium"}});"><div class="mask"></div></div> -->
@@ -148,16 +175,42 @@
                     <!-- {{/if}} -->
                     <div class="tag-info">
                         <h2 class="tag-name">手游</h2>
-                        <!-- {{#get "posts" filter="tags:{{slug}}"}} -->
-                        <!-- <div class="post-count">{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</div> -->
-                        <!-- {{/get}} -->
+                        <div class="post-count">1 post</div>
                     </div>
                 </div>
                 </a>
             </div>
             
+
+          
+
+            
+            
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+                  
+            
+              
+                
+              
+                
+              
+            
+              
+            
+
+            <!--  not displaying internal tags: featured, carousel -->
+            
             <div class="column tag-archive-item is-3-desktop is-4-tablet is-6-mobile can-scale">
-                <a href="https://ayolk.com/tag/mmo/" alt="MMO" title="MMO">
+                <a href="https://ayolk.com/tag/mmo/" alt="Tags: MMO" title="Tags: MMO">
                 <div class="tag-card has-text-centered">
                     <!-- {{#if feature_image}} -->
                     <!-- <div class="tag-image" style="background-image:url({{img_url feature_image size="medium"}});"><div class="mask"></div></div> -->
@@ -166,16 +219,44 @@
                     <!-- {{/if}} -->
                     <div class="tag-info">
                         <h2 class="tag-name">MMO</h2>
-                        <!-- {{#get "posts" filter="tags:{{slug}}"}} -->
-                        <!-- <div class="post-count">{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</div> -->
-                        <!-- {{/get}} -->
+                        <div class="post-count">1 post</div>
                     </div>
                 </div>
                 </a>
             </div>
             
+
+          
+
+            
+            
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+              
+                
+                  
+            
+              
+                
+              
+                
+              
+            
+              
+            
+
+            <!--  not displaying internal tags: featured, carousel -->
+            
             <div class="column tag-archive-item is-3-desktop is-4-tablet is-6-mobile can-scale">
-                <a href="https://ayolk.com/tag/ce-ping/" alt="测评" title="测评">
+                <a href="https://ayolk.com/tag/ce-ping/" alt="Tags: 测评" title="Tags: 测评">
                 <div class="tag-card has-text-centered">
                     <!-- {{#if feature_image}} -->
                     <!-- <div class="tag-image" style="background-image:url({{img_url feature_image size="medium"}});"><div class="mask"></div></div> -->
@@ -184,16 +265,42 @@
                     <!-- {{/if}} -->
                     <div class="tag-info">
                         <h2 class="tag-name">测评</h2>
-                        <!-- {{#get "posts" filter="tags:{{slug}}"}} -->
-                        <!-- <div class="post-count">{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</div> -->
-                        <!-- {{/get}} -->
+                        <div class="post-count">1 post</div>
                     </div>
                 </div>
                 </a>
             </div>
             
+
+          
+
+            
+            
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+              
+                
+              
+            
+              
+                
+                  
+            
+              
+            
+
+            <!--  not displaying internal tags: featured, carousel -->
+            
             <div class="column tag-archive-item is-3-desktop is-4-tablet is-6-mobile can-scale">
-                <a href="https://ayolk.com/tag/dian-zi-you-xi/" alt="电子游戏" title="电子游戏">
+                <a href="https://ayolk.com/tag/dian-zi-you-xi/" alt="Tags: 电子游戏" title="Tags: 电子游戏">
                 <div class="tag-card has-text-centered">
                     <!-- {{#if feature_image}} -->
                     <!-- <div class="tag-image" style="background-image:url({{img_url feature_image size="medium"}});"><div class="mask"></div></div> -->
@@ -202,16 +309,44 @@
                     <!-- {{/if}} -->
                     <div class="tag-info">
                         <h2 class="tag-name">电子游戏</h2>
-                        <!-- {{#get "posts" filter="tags:{{slug}}"}} -->
-                        <!-- <div class="post-count">{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</div> -->
-                        <!-- {{/get}} -->
+                        <div class="post-count">1 post</div>
                     </div>
                 </div>
                 </a>
             </div>
             
+
+          
+
+            
+            
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+              
+                
+              
+            
+              
+                
+              
+                
+                  
+            
+              
+            
+
+            <!--  not displaying internal tags: featured, carousel -->
+            
             <div class="column tag-archive-item is-3-desktop is-4-tablet is-6-mobile can-scale">
-                <a href="https://ayolk.com/tag/shi-pin-you-xi/" alt="视频游戏" title="视频游戏">
+                <a href="https://ayolk.com/tag/shi-pin-you-xi/" alt="Tags: 视频游戏" title="Tags: 视频游戏">
                 <div class="tag-card has-text-centered">
                     <!-- {{#if feature_image}} -->
                     <!-- <div class="tag-image" style="background-image:url({{img_url feature_image size="medium"}});"><div class="mask"></div></div> -->
@@ -220,15 +355,16 @@
                     <!-- {{/if}} -->
                     <div class="tag-info">
                         <h2 class="tag-name">视频游戏</h2>
-                        <!-- {{#get "posts" filter="tags:{{slug}}"}} -->
-                        <!-- <div class="post-count">{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</div> -->
-                        <!-- {{/get}} -->
+                        <div class="post-count">1 post</div>
                     </div>
                 </div>
                 </a>
             </div>
             
-          </div>
+
+          
+
+        </div>
       </div>
     </section>
 
@@ -241,7 +377,7 @@
       
           Thoughts, stories and games.
         
-          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong> v1.3.2 </a> | Powered by <a href="https://github.com/getgridea/gridea" target="_blank" rel="noopener nofollow">Gridea</a>
+          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong></a>
       </p>
   </div>
 </footer>
@@ -249,12 +385,11 @@
 <!-- jquery: for carousel + prismjs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!-- main js -->
+<!-- footer js -->
 <script src="https://ayolk.com/media/scripts/footer.js"></script>
 
-
-  <!-- faster page-loading -->
-  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+<!-- faster page-loading -->
+<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 
 </body>
 

@@ -67,7 +67,7 @@ if (typeof show_search == 'undefined') {
   // click search button event
   $("#search-btn").click(function(event) {
       // $("#search-input").val("");
-      $("#search-form").fadeIn();
+      $("#search-container").fadeIn();
       $("#search-btn").hide();
       $('#search-input').focus();
       $("#search-results").show();
@@ -75,28 +75,28 @@ if (typeof show_search == 'undefined') {
   });
   // click close button event
   $("#close-btn").click(function(event) {
-    $("#search-form").hide();
+    $("#search-container").hide();
     $("#search-results").hide(); 
-    $("#search-btn").fadeIn(); 
+    $("#search-btn").show(); 
     // $("#search-input").val(""); //clear search field text  
     event.stopPropagation();
   });
   // click outside of search form event
   $(document).mouseup(function(e) 
   {
-      var container = $("#search-form");
+      var container = $("#search-container");
       
       // if the target of the click isn't the container nor a descendant of the container
       if (show_search && !container.is(e.target) && container.has(e.target).length === 0) 
       {
           container.hide();
           $("#search-results").hide(); 
-          $("#search-btn").fadeIn();
+          $("#search-btn").show();
       }
   });
   // scroll event
   $(window).scroll(function(){
-    $("#search-form").hide(); 
+    $("#search-container").hide(); 
     $("#search-results").hide(); 
     $("#search-btn").show();
   });
@@ -118,26 +118,41 @@ if (line_numbers) {
 /*  Code injection: var external_link_new_tab
 /*----------------------------------------------------*/
 
-// switch: external_link_new_tab, default: disabled 
-if (typeof external_link_new_tab == 'undefined') {
-  var external_link_new_tab = false;
-};
-
 // rules
 $.expr[':'].external_new_tab = function(obj){
   return !obj.href.match(/^mailto\:/)
-         && (obj.hostname != location.hostname)
-         && !obj.href.match(/^javascript\:/)
-         && !obj.href.match(/^$/)
+        && (obj.hostname != location.hostname)
+        && !obj.href.match(/^javascript\:/)
+        && !obj.href.match(/^$/)
 };
 
-// action
-if (external_link_nofollow) {
-  $(document).ready(function(){
-    // open post-content external links with new tabs
-    $('.post-content a:external_new_tab').attr('target', '_blank');
-  });
-};
+// if (site.customConfig.exLinkNewPage) {
+    $(document).ready(function(){
+      // open post-content external links with new tabs
+      $('.post-content a:external_new_tab').attr('target', '_blank');
+    });
+// };
+
+// switch: external_link_new_tab, default: disabled 
+// if (typeof external_link_new_tab == 'undefined') {
+//   var external_link_new_tab = true;
+// };
+
+// // rules
+// $.expr[':'].external_new_tab = function(obj){
+//   return !obj.href.match(/^mailto\:/)
+//          && (obj.hostname != location.hostname)
+//          && !obj.href.match(/^javascript\:/)
+//          && !obj.href.match(/^$/)
+// };
+
+// // action
+// if (external_link_nofollow) {
+//   $(document).ready(function(){
+//     // open post-content external links with new tabs
+//     $('.post-content a:external_new_tab').attr('target', '_blank');
+//   });
+// };
 
 /*----------------------------------------------------*/
 /*  External links nofollow | 2019.10.05
@@ -147,12 +162,18 @@ if (external_link_nofollow) {
 /*----------------------------------------------------*/
 // external nofollow, set default: disabled 
 if (typeof external_link_nofollow == 'undefined') {
-  var external_link_nofollow = false;
+  var external_link_nofollow = true;
 };
 
 // nofollow whitelist, set default: empty list
 if (typeof nofollow_whitelist == 'undefined') {
-  var nofollow_whitelist = [];
+  var nofollow_whitelist = [
+    "fizzy.cc"
+    ,"www.fizzy.cc"
+    ,"www.51redaiyu.com"
+    ,"www.iyu.co","iyu.co"
+    ,"ayolk.com"
+  ];
   // example: 
   // var nofollow_whitelist = ["fizzy.cc", "blog.taiker.space", "www.iyu.co", "www.51redaiyu.com"];
 };

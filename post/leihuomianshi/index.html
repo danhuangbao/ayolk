@@ -4,16 +4,14 @@
   <!-- head matters -->
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="HandheldFriendly" content="True" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
-
-<title>一颗蛋黄</title>
-<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1605536384345">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<title>网易雷火用户体验研究员校招面试记录 - 一颗蛋黄</title>
+<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1606145652818">
 <link rel="stylesheet" href="https://ayolk.com/styles/main.css">
+<link rel="canonical" href="https://ayolk.com/post/leihuomianshi/">
 
 <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
 <!-- <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script> -->
@@ -21,8 +19,16 @@
 <!-- Head JS -->
 <script src="https://ayolk.com/media/scripts/header.js"></script>
 
+<!-- Google Analytics -->
 
  
+    <meta name="description" content="记录人生第一次参加校招的经历。简单总结下雷火两轮用户体验研究的线上面试的流程。
+面试是19年9月参加的，到现在写这篇记录已经过去半年了。好在当时面完记录了一些细节，现在回想起来，更多的体会不是关于面试问题的专业度，而是提问方向的套路。
+
+面..." />
+    <meta name="keywords" content="面试,用户体验" />
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
   </head>
 
   <body class="has-background-light-line ">
@@ -68,25 +74,25 @@
 <!-- navigation -->
 
     
-        <a class="navbar-item" href="/">
+        <a class="navbar-item " href="https://ayolk.com/">
             首页
         </a>
     
   
     
-        <a class="navbar-item" href="/archives">
+        <a class="navbar-item " href="https://ayolk.com/archives">
             归档
         </a>
     
   
     
-        <a class="navbar-item" href="/tags">
+        <a class="navbar-item " href="https://ayolk.com/tags">
             标签
         </a>
     
   
     
-        <a class="navbar-item" href="/post/about">
+        <a class="navbar-item " href="https://ayolk.com/post/about">
             关于
         </a>
     
@@ -104,22 +110,23 @@
     </div>
 
     <div class="fizzy-search">
-        <div class="field has-addons" style="display:none" id="search-form">
-            <div class="control has-icons-left">
-                <input id="search-input" class="input" placeholder="Search">
+        <div class="field has-addons" style="display:none" id="search-container">
+            <form class="control has-icons-left" id="search-form" action="https://ayolk.com/search/">
+                <input id="search-input" class="input" placeholder="Search" name="q">
                 <span class="icon is-left">
                     <i class="iconfont icon-search"></i>
                 </span>
-            </div>
+            </form>
             <div class="control"  id="close-btn">
                 <button type="submit" class="button"><i class="iconfont icon-cross"></i></button>
             </div>
         </div>
-        <div id="search-results"></div>
+        <!-- <div id="search-results"></div> -->
     </div>
  
           </div>
 
+          <!--%= link %-->
 
       </div>
   </nav>
@@ -144,7 +151,7 @@
                       </section>
                    
   
-                      <section class="post-wrap is-vpadding-15">
+                      <section class="post-wrap">
                           <!-- meta -->
                           <div class="has-2-ends is-montserrat is-uppercase is-size-7">
                               <div class="end meta-text date">2020-03-21</div>
@@ -158,11 +165,19 @@
                            
                           <div class="buttons tags has-text-weight-semibold">
                               <span class="button is-static is-size-7-mobile" style="padding:0 0.5em;min-width:2.5em;">
-                                 <i class="iconfont icon-tag"></i> 
+                                
+                                  <i class="iconfont icon-tags"></i>
                                 
                               </span>
+                              <!-- exclude internal-tags：featuredLabel, carouselLabel -->
                               
-                                <a href="https://ayolk.com/tag/mian-shi/" class="button is-light is-uppercase is-size-7-mobile has-text-weight-semibold">面试</a>
+                                
+                                  <a href="https://ayolk.com/tag/mian-shi/" class="button is-light is-uppercase is-size-7-mobile has-text-weight-semibold">面试</a>
+                                
+                              
+                                
+                                  <a href="https://ayolk.com/tag/yong-hu-ti-yan/" class="button is-light is-uppercase is-size-7-mobile has-text-weight-semibold">用户体验</a>
+                                
                               
                           </div>
                           
@@ -233,10 +248,10 @@
             <!-- <a href="#" class="has-text-grey-darker"> -->
                 <figure class="image is-96x96 is-margin-auto">
                 
-                    <img class="image-squared box author-avatar" src="/images/avatar.png" alt="" title="">
+                    <img class="image-squared box author-avatar" src="/images/avatar.png" alt="Emilie" title="Emilie">
                 
                 </figure>                                
-                <div class="name"></div>
+                <div class="name">Emilie</div>
             <!-- </a> -->
             <!-- author: meta -->
             <ul class="meta-info is-size-6 has-text-grey-light">
@@ -257,7 +272,7 @@
     </div>
     </div>
 </div>
-                          
+
                       </section>
                   </div>
               </article>
@@ -301,8 +316,8 @@
 
 <!-- post_footer -->
 <!-- KaTeX: js -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -326,7 +341,7 @@
       
           Thoughts, stories and games.
         
-          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong> v1.3.2 </a> | Powered by <a href="https://github.com/getgridea/gridea" target="_blank" rel="noopener nofollow">Gridea</a>
+          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong></a>
       </p>
   </div>
 </footer>
@@ -334,12 +349,12 @@
 <!-- jquery: for carousel + prismjs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!-- main js -->
+<!-- footer js -->
 <script src="https://ayolk.com/media/scripts/footer.js"></script>
-
 
 <!-- faster page-loading -->
 <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
 </body>
 
 </html>

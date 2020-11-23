@@ -4,16 +4,14 @@
 <!-- head matters -->
 <head>
   <meta charset="utf-8" />
-<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="HandheldFriendly" content="True" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
-
-<title>一颗蛋黄</title>
-<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1605536384345">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<title>Post Archive - 一颗蛋黄</title>
+<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1606145652818">
 <link rel="stylesheet" href="https://ayolk.com/styles/main.css">
+<link rel="canonical" href="https://ayolk.com/archives/">
 
 <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
 <!-- <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script> -->
@@ -21,8 +19,10 @@
 <!-- Head JS -->
 <script src="https://ayolk.com/media/scripts/header.js"></script>
 
+<!-- Google Analytics -->
 
  
+  <meta name="description" content="是一颗蛋黄没错" />
 </head>
 
 <body class="has-background-light-line">
@@ -68,25 +68,25 @@
 <!-- navigation -->
 
     
-        <a class="navbar-item" href="/">
+        <a class="navbar-item " href="https://ayolk.com/">
             首页
         </a>
     
   
     
-        <a class="navbar-item" href="/archives">
+        <a class="navbar-item nav-current" href="https://ayolk.com/archives">
             归档
         </a>
     
   
     
-        <a class="navbar-item" href="/tags">
+        <a class="navbar-item " href="https://ayolk.com/tags">
             标签
         </a>
     
   
     
-        <a class="navbar-item" href="/post/about">
+        <a class="navbar-item " href="https://ayolk.com/post/about">
             关于
         </a>
     
@@ -104,31 +104,35 @@
     </div>
 
     <div class="fizzy-search">
-        <div class="field has-addons" style="display:none" id="search-form">
-            <div class="control has-icons-left">
-                <input id="search-input" class="input" placeholder="Search">
+        <div class="field has-addons" style="display:none" id="search-container">
+            <form class="control has-icons-left" id="search-form" action="https://ayolk.com/search/">
+                <input id="search-input" class="input" placeholder="Search" name="q">
                 <span class="icon is-left">
                     <i class="iconfont icon-search"></i>
                 </span>
-            </div>
+            </form>
             <div class="control"  id="close-btn">
                 <button type="submit" class="button"><i class="iconfont icon-cross"></i></button>
             </div>
         </div>
-        <div id="search-results"></div>
+        <!-- <div id="search-results"></div> -->
     </div>
  
           </div>
 
+          <!--%= link %-->
 
       </div>
   </nav>
 </header>
 
+    <!-- pre-js -->
+    
+
     <!-- title -->
     <section class="section">
       <div class="container">
-          <h1 class="title has-text-centered"><i class="iconfont icon-archive"></i> Post Archive</h1>     
+          <h1 class="title has-text-centered"><i class="iconfont icon-archive"></i> Post Archive</h1>   
       </div>
     </section>
 
@@ -142,6 +146,7 @@
                       <section class="post-wrap is-vpadding-15">
                           <div class="spacing-15 is-hidden-mobile"></div>
                             <div class="content post-content is-size-6-mobile">
+                              <blockquote>There are 2 posts in total.</blockquote>
                               
 
 
@@ -149,16 +154,16 @@
   <ul class="post-archive">
     
       
-          <li class='post-archive-item' year="2019" month="2019-08-31">
-            <span class="subtitle"><a href='https://ayolk.com/post/rok_01/'>Rise of Kingdom 万国觉醒 体验测评（1）</a></span>
-            <span class="date"><time class="button is-static is-size-7">2019-08-31</time></span>
+          <li class='post-archive-item level' year="2019" month="2019-08-31">
+            <span class="subtitle level-left"><a href='https://ayolk.com/post/rok_01/'>Rise of Kingdom 万国觉醒 体验测评（1）</a></span>
+            <span class="date level-right"><time class="button is-static is-size-7">2019-08-31</time></span>
           </li>
       
     
       
-          <li class='post-archive-item' year="2019" month="2019-06-26">
-            <span class="subtitle"><a href='https://ayolk.com/post/001/'>电子游戏简史1-？</a></span>
-            <span class="date"><time class="button is-static is-size-7">2019-06-26</time></span>
+          <li class='post-archive-item level' year="2019" month="2019-06-26">
+            <span class="subtitle level-left"><a href='https://ayolk.com/post/001/'>电子游戏简史1-？</a></span>
+            <span class="date level-right"><time class="button is-static is-size-7">2019-06-26</time></span>
           </li>
       
     
@@ -183,7 +188,7 @@
       
           Thoughts, stories and games.
         
-          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong> v1.3.2 </a> | Powered by <a href="https://github.com/getgridea/gridea" target="_blank" rel="noopener nofollow">Gridea</a>
+          <br>Using <a href="https://fizzy.cc/fizzy-theme/" target="_blank" rel="noopener noreferrer"><strong>The Fizzy Theme</strong></a>
       </p>
   </div>
 </footer>
@@ -191,12 +196,12 @@
 <!-- jquery: for carousel + prismjs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!-- main js -->
+<!-- footer js -->
 <script src="https://ayolk.com/media/scripts/footer.js"></script>
-
 
 <!-- faster page-loading -->
 <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
 </body>
 
 </html>
