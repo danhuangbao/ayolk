@@ -9,12 +9,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
 <title>电子游戏 - 一颗蛋黄</title>
-<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1606145652818">
+<link rel="shortcut icon" href="https://ayolk.com/favicon.ico?v=1613529505005">
 <link rel="stylesheet" href="https://ayolk.com/styles/main.css">
 <link rel="canonical" href="https://ayolk.com/tag/dian-zi-you-xi/">
 
 <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
 <!-- <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script> -->
+
 
 <!-- Head JS -->
 <script src="https://ayolk.com/media/scripts/header.js"></script>
@@ -30,8 +31,8 @@
     <!-- header -->
     <header>
   <nav id="navbar" class="navbar is-white is-spaced has-shadow-thin is-fixed-top" style="z-index:999;" role="navigation" aria-label="main navigation">
+    <div class="nav-container column is-paddingless is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd">
       <div class="navbar-brand">
-
         <!-- if wide logo is uploaded -->
         
           <div class="navbar-item text-logo">
@@ -59,7 +60,6 @@
       </div>
 
       <div id="navbarPrimary" class="navbar-menu">
-
           <!-- Site Navigation -->
           <div class="navbar-start">
             <!--% for (let i=0; i < menus.length; i++) { %-->
@@ -86,7 +86,7 @@
     
   
     
-        <a class="navbar-item " href="https://ayolk.com/post/about">
+        <a class="navbar-item " href="https://ayolk.com/about">
             关于
         </a>
     
@@ -112,7 +112,7 @@
                 </span>
             </form>
             <div class="control"  id="close-btn">
-                <button type="submit" class="button"><i class="iconfont icon-cross"></i></button>
+                <button type="submit" class="button" style="padding-left:calc(0.75em - 1px);padding-right:calc(0.75em - 1px);"><i class="iconfont icon-cross"></i></button>
             </div>
         </div>
         <!-- <div id="search-results"></div> -->
@@ -123,6 +123,7 @@
           <!--%= link %-->
 
       </div>
+    </div>
   </nav>
 </header> 
 
@@ -147,6 +148,14 @@
         
           
     
+      
+    
+      
+        
+      
+    
+      
+        
       
     
 
@@ -175,9 +184,9 @@
     <!-- post list -->
     <main class="section">
       <div class="columns">
-          <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
-          <div class="column is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd"> 
-              
+        <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
+        <div class="column is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd">
+            
 
 <!-- create tag names list -->
 
@@ -187,10 +196,10 @@
 
         <!-- featured_image -->
         
-            <a class="column is-hidden-mobile is-paddingless" href="https://ayolk.com/post/001/" alt="电子游戏简史1-？" title="电子游戏简史1-？">
+            <a class="column is-hidden-mobile is-paddingless" href="https://ayolk.com/001/" alt="电子游戏简史1-？" title="电子游戏简史1-？">
                 <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/hZwvqoalQr3SAO2.jpg')"></div>    
             </a>
-            <a class="column is-hidden-tablet" href="https://ayolk.com/post/001/" alt="电子游戏简史1-？" title="电子游戏简史1-？">
+            <a class="column is-hidden-tablet" href="https://ayolk.com/001/" alt="电子游戏简史1-？" title="电子游戏简史1-？">
                 <div class="featured-image" style="background-image: url('https://i.loli.net/2020/08/07/hZwvqoalQr3SAO2.jpg')"></div>    
             </a>
         
@@ -235,11 +244,11 @@
             </div>
 
             <!-- heading & content -->
-            <a href="https://ayolk.com/post/001/" class="has-text-black">
+            <a href="https://ayolk.com/001/" class="has-text-black">
                 <h1 class="title is-3 is-size-5-mobile is-margin-bottom-1">电子游戏简史1-？</h1>
             </a>
             
-                <p class="is-hidden-mobile limit-line-3" style="margin-bottom:1.5rem;">
+                <p class="is-hidden-mobile limit-text-line-2" style="margin-bottom:1.5rem;">
             
                 首先我们看一个简单的问题：
 <p>Q: 什么是游戏？<br>
@@ -283,17 +292,33 @@ A: 游戏是一种需要满足以下三个条件的活动：</p>
     </div> 
 </article>
 
-          </div>
-          <div class="column is-hidden-touch"></div>
+        </div>
+        <div class="column is-hidden-touch"></div>
       </div>
     </main>
-  
+
     <!-- pagination -->
+    
+
+<div class="buttons has-addons is-centered" aria-label="pagination">
+
+  
+
+  
+
+  <span class="button is-static">1 / 1</span>
+
+  
+
+  
+
+</div>
+
 
     <!-- footer -->
     <footer class="footer is-centered" style="padding-bottom:3rem;">
   <div class="content has-text-centered">
-      <p class="copyright">&copy; 2020 <a href="https://ayolk.com"><strong class="has-text-grey-darker">一颗蛋黄</strong></a></p>
+      <p class="copyright">&copy; 2021 <a href="https://ayolk.com"><strong class="has-text-grey-darker">一颗蛋黄</strong></a></p>
       <p class="declare has-text-grey">
       
       
@@ -304,8 +329,10 @@ A: 游戏是一种需要满足以下三个条件的活动：</p>
   </div>
 </footer>
 
-<!-- jquery: for carousel + prismjs -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- jquery: for search box + carousel + prismjs -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<!-- <script src="<!%= themeConfig.domain /media/scripts/jquery-3.5.1.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
 <!-- footer js -->
 <script src="https://ayolk.com/media/scripts/footer.js"></script>

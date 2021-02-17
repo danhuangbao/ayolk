@@ -130,6 +130,7 @@ $.expr[':'].external_new_tab = function(obj){
     $(document).ready(function(){
       // open post-content external links with new tabs
       $('.post-content a:external_new_tab').attr('target', '_blank');
+      $('.post-content a:external_new_tab').addClass('ext-link');
     });
 // };
 
@@ -194,3 +195,10 @@ if (external_link_nofollow) {
     $('.post-content a:external_nofollow').attr('rel','noopener noreferrer nofollow');
   });
 };
+
+// showcase only available on homepage
+// window.onload = function(){
+//   // reveal showcase, hide placeholder
+//   $('#showcase').removeClass("is-hidden");
+//   $('#showcase-ph').addClass("is-hidden");
+// } 

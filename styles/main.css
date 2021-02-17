@@ -220,6 +220,9 @@ summary {
   margin: 0;
   padding: 0;
 }
+* {
+  outline: none !important;
+}
 body,
 html {
   overflow-x: hidden;
@@ -346,7 +349,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -392,9 +401,14 @@ h6 {
 }
 .content code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace !important;
-  font-size: 80%;
 }
 /* ====================== header ====================== 2019.04.12 */
+@media screen and (min-width: 1024px) {
+  .nav-container {
+    margin: 0 auto;
+    display: flex !important;
+  }
+}
 .navbar-brand .text-logo a {
   font-weight: 700;
   font-size: 1.5rem;
@@ -406,6 +420,9 @@ h6 {
 .navbar-brand .navbar-item span {
   color: var(--main-color);
 }
+.navbar-start {
+  margin: 0 0 0 auto !important;
+}
 /* search form 2019.05.30*/
 .fizzy-search {
   /* position:relative; */
@@ -413,8 +430,6 @@ h6 {
 #search-btn {
   cursor: pointer;
   border-radius: 4px;
-  color: #7a7a7a;
-  margin-left: 2px;
 }
 #search-btn:hover {
   background-color: #f2f2f2;
@@ -437,35 +452,66 @@ h6 {
   color: var(--main-color);
   border-color: var(--link-color-hover);
 }
-#search-results {
-  z-index: 3;
-  position: absolute;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-left: 2px;
-  box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  background-color: #fff;
+/* navbar */
+.navbar-start .navbar-item,
+.navbar-item img {
+  margin-left: 0.25rem;
 }
-@media screen and (max-width: 768px) {
-  #search-results {
-    margin: 0 1px !important;
-  }
+.navbar-start .navbar-item:hover {
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 0px 1px 0 #ccc;
 }
-#search-results a {
-  background: #fff;
-  border-radius: 3px;
-  color: #333;
-  word-spacing: 2.5px;
-  margin: 0.5rem !important;
-}
-#search-results a:hover {
+.navbar-start .nav-current {
+  background-color: #eee;
   font-weight: 600;
-  word-spacing: 1px;
-  background: #f7f7f7;
-  color: #333;
+  box-shadow: 0 0px 1px 0 #ccc;
 }
-.fizzy-search .field:not(:last-child) {
-  margin-bottom: 0!important;
+.site-header {
+  padding: 48px 0;
+  text-align: center;
+}
+.site-header .site-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+.site-header .site-description {
+  font-size: 16px;
+  padding: 24px;
+  color: #495057;
+}
+.site-header .menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.site-header .menu-container a.menu {
+  font-size: 16px;
+  padding: 8px 16px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.site-header .avatar {
+  margin-bottom: 24px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.site-header .social-container {
+  padding: 16px;
+  font-size: 18px;
+}
+.site-header .social-container a {
+  margin: 4 8px;
+  color: #868e96;
+}
+@media (max-width: 600px) {
+  .site-header {
+    padding: 24px 0 0;
+  }
+  .site-header .avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
 /* background */
 .has-background-light-line {
@@ -591,11 +637,24 @@ h6 {
     padding-bottom: 1rem!important;
   }
 }
+/* ====================== component: swiper carousel ====================== 2020.11.25 */
+.swiper-slide {
+  border-radius: 10px;
+}
+.swiper-pagination-bullet {
+  opacity: 0.2 !important;
+  background: #fff !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 0.5 !important;
+  background: #fff !important;
+}
 /* ====================== component: carousel ====================== 2019.04.09 */
 .carousel {
   overflow: hidden;
   height: 22.5rem;
-  border-radius: 6px;
+  width: 100%;
+  border-radius: 10px;
 }
 .carousel .carousel-item {
   overflow: hidden;
@@ -619,6 +678,7 @@ h6 {
   width: 100%;
   padding: 20px;
   z-index: 6;
+  border-radius: 0 0 10px 10px;
 }
 .carousel-tag,
 .tf-tag {
@@ -897,7 +957,7 @@ h6 {
   height: 400px;
   background-size: cover;
   background-position: center center;
-  border-radius: 6px 6px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 @media screen and (max-width: 768px) {
   .single-article .featured-image {
@@ -958,6 +1018,13 @@ h6 {
   color: var(--link-color-hover);
   border-bottom: 1px solid;
 }
+.post-wrap .post-content a.ext-link:after {
+  font-family: iconfont;
+  content: "\e603";
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
 .post-wrap .post-content strong {
   font-weight: 600;
   color: inherit;
@@ -984,6 +1051,15 @@ h6 {
 .post-wrap .post-content ul ul li {
   line-height: 1.4em;
 }
+p code,
+table code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 80%;
+  color: inherit;
+  background-color: #f3f4f4;
+  border-radius: 6px;
+}
 /* code block */
 .post-wrap .post-content pre code {
   display: block;
@@ -992,12 +1068,35 @@ h6 {
   font-weight: 400;
   /* padding-bottom: 1.2em; */
 }
+.post-wrap .post-content pre code .tag {
+  display: inline-block;
+  background-color: inherit;
+  font-size: inherit;
+  height: inherit;
+  padding: inherit;
+  white-space: inherit;
+}
+pre code .tag .tag {
+  display: inherit;
+  background-color: inherit;
+  font-size: inherit;
+  height: inherit;
+  padding: inherit;
+  white-space: inherit;
+}
+center {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
 pre[class*="language-"].line-numbers {
   padding-left: 2.8em !important;
 }
 .post-wrap .post-content img {
   display: block;
   margin: 1rem auto;
+}
+.post-content red {
+  color: red;
 }
 /* image layout (temporary solution, may have some bugs 2019.04.14) */
 /* fixed wide layout bug, but need a better way in the future */
@@ -1116,6 +1215,9 @@ table tr td:last-child {
   padding: 6px 12px;
   border: #dbdbdb 1px solid;
 }
+.post-content table td {
+  white-space: pre-wrap;
+}
 /* table responsive 2019.07.10 */
 @media screen and (max-width: 1279px) {
   .post-content table {
@@ -1148,7 +1250,6 @@ table tr td:last-child {
 #toc,
 #toc-img {
   border-radius: 3px;
-  background-color: white;
   /* box-shadow: 0 20px 40px rgba(12,12,94,.1) !important; */
 }
 /* not displaying below 1280px */
@@ -1204,14 +1305,6 @@ table tr td:last-child {
   /* background-color: #fff; */
   /* margin-right:10px; */
   padding: 0 10px 0 10px;
-}
-#toc ul:first-child,
-#toc-img ul:first-child {
-  padding-top: 10px;
-}
-#toc ul:last-child,
-#toc-img ul:last-child {
-  padding-bottom: 10px;
 }
 #toc ul ul,
 #toc-img ul ul {
@@ -1274,7 +1367,7 @@ table tr td:last-child {
   overflow: hidden;
   background: #fff center center;
   background-size: cover;
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
 }
@@ -1392,24 +1485,45 @@ table tr td:last-child {
   height: 100%;
 }
 /* ====================== template: Post Archive ====================== 2019.05.28 */
-ul.post-archive {
-  line-height: 2 !important;
-}
 .post-archive-item {
   display: flex;
-  justify-content: start;
-  align-items: normal;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: nowrap;
-  line-height: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 6px;
 }
-.post-archive-item .date {
-  margin: 0 0.75rem;
+.post-archive-item:hover {
+  background-color: #f6f6f6;
+}
+.post-archive-item:hover .subtitle {
+  color: #222;
+}
+.post-archive-item:hover .subtitle:before {
+  content: "\e61b";
 }
 .post-archive-item a {
   border-bottom: 0 !important;
 }
 .post-archive-item .subtitle {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0rem !important;
+}
+.post-archive-item .subtitle:before {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
+}
+.post-archive-item .subtitle:before {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e645";
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
 }
 .post-archive-item .authors,
 .post-archive-item .authors a {
@@ -1419,65 +1533,15 @@ ul.post-archive {
 .post-archive .post-archive-item time {
   white-space: nowrap;
 }
-/* navbar */
-.navbar-start .navbar-item,
-.navbar-item img {
-  margin-right: 0.25rem;
-}
-.navbar-start .navbar-item:hover {
-  background-color: #f5f5f5 !important;
-  box-shadow: 0 0px 1px 0 #ccc;
-}
-.navbar-start .nav-current {
-  background-color: #eee;
-  font-weight: 600;
-  box-shadow: 0 0px 1px 0 #ccc;
-}
-.site-header {
-  padding: 48px 0;
-  text-align: center;
-}
-.site-header .site-title {
-  font-size: 32px;
-  font-weight: bold;
-}
-.site-header .site-description {
-  font-size: 16px;
-  padding: 24px;
-  color: #495057;
-}
-.site-header .menu-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.site-header .menu-container a.menu {
-  font-size: 16px;
-  padding: 8px 16px;
-  flex-shrink: 0;
-  font-weight: 600;
-}
-.site-header .avatar {
-  margin-bottom: 24px;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-}
-.site-header .social-container {
-  padding: 16px;
-  font-size: 18px;
-}
-.site-header .social-container a {
-  margin: 4 8px;
-  color: #868e96;
-}
-@media (max-width: 600px) {
-  .site-header {
-    padding: 24px 0 0;
+@media screen and (max-width: 768px) {
+  .post-archive-item {
+    padding: 0.5rem;
   }
-  .site-header .avatar {
-    width: 80px;
-    height: 80px;
+  ul.post-archive {
+    margin-left: 0!important;
+  }
+  .post-archive-item .date {
+    display: none;
   }
 }
 /* ====================== template: Tag Archive ====================== 2019.04.14 */
@@ -1817,8 +1881,8 @@ ul.post-archive {
   display: flex;
 }
 /* background */
-.has-background-light-line {
-  background-image: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 2px, #eee 2px, #eee 3px);
+.has-bg-color-white {
+  background-color: #fff;
 }
 .bg-cover-center {
   background-size: cover;
@@ -1874,11 +1938,23 @@ ul.post-archive {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.limit-line-3 {
+.limit-text-line-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.limit-text-line-3 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+.limit-text-wide {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 /* ====================== error page ====================== 2019.05.10 */
 .error-wrap {
@@ -2390,7 +2466,7 @@ table th {
 }
 .box {
   background-color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: #4a4a4a;
   display: block;
@@ -7909,7 +7985,7 @@ a.navbar-item.is-active,
   }
 }
 .panel {
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   font-size: 1rem;
 }
@@ -12119,8 +12195,8 @@ a.has-text-danger-dark:focus {
 @font-face {
   font-family: 'iconfont';
   /* project id 1434549 */
-  src: url('//at.alicdn.com/t/font_1434549_5rg7w6zzzeg.eot');
-  src: url('//at.alicdn.com/t/font_1434549_5rg7w6zzzeg.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1434549_5rg7w6zzzeg.woff2') format('woff2'), url('//at.alicdn.com/t/font_1434549_5rg7w6zzzeg.woff') format('woff'), url('//at.alicdn.com/t/font_1434549_5rg7w6zzzeg.ttf') format('truetype'), url('//at.alicdn.com/t/font_1434549_5rg7w6zzzeg.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1434549_htgzsj22uma.eot');
+  src: url('//at.alicdn.com/t/font_1434549_htgzsj22uma.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1434549_htgzsj22uma.woff2') format('woff2'), url('//at.alicdn.com/t/font_1434549_htgzsj22uma.woff') format('woff'), url('//at.alicdn.com/t/font_1434549_htgzsj22uma.ttf') format('truetype'), url('//at.alicdn.com/t/font_1434549_htgzsj22uma.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -12173,6 +12249,15 @@ a.has-text-danger-dark:focus {
 }
 .icon-question:before {
   content: "\e60f";
+}
+.icon-newpage:before {
+  content: "\e603";
+}
+.icon-dot:before {
+  content: "\e645";
+}
+.icon-dash:before {
+  content: "\e61b";
 }
 .hljs {
   display: block;
